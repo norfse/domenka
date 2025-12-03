@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona</title>
+    <title>Żużel - Strona fanów</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    tekst
+    <header class="site-header">
+        <div class="container">
+            <h1>Żużel — Pasja, Prędkość, Emocje</h1>
+            <nav>
+                <a href="index.html" class="active">Strona główna</a>
+                <a href="team.html">Zawodnicy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Witamy na stronie poświęconej wyścigom żużlowym</h2>
+            <p>Znajdziesz tu galerię, informacje o zespołach i prosty skrypt losujący zwycięzcę — idealne miejsce dla fanów prędkości.</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Galeria</h2>
+            <div class="grid">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="Żużel 1" data-full="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80">
+                <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e3f?auto=format&fit=crop&w=1200&q=80" alt="Żużel 2" data-full="https://images.unsplash.com/photo-1515542622106-78bda8ba0e3f?auto=format&fit=crop&w=2000&q=80">
+                <img src="https://images.unsplash.com/photo-1475964515535-1b6a5a5a7e2d?auto=format&fit=crop&w=1200&q=80" alt="Żużel 3" data-full="https://images.unsplash.com/photo-1475964515535-1b6a5a5a7e2d?auto=format&fit=crop&w=2000&q=80">
+            </div>
+            <div class="gallery-actions">
+                <button id="random-winner">Losuj zwycięzcę</button>
+                <span id="winner-name" aria-live="polite"></span>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>Nadchodzące wydarzenie</h2>
+            <p>Odliczanie do następnego wyścigu:</p>
+            <div id="countdown" class="countdown">-- dni --:--:--</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Strona fanów żużla — przykładowa strona.</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+        <button class="modal-close" aria-label="Zamknij">✕</button>
+        <img id="modal-img" alt="">
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
